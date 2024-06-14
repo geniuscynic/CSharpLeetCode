@@ -14,22 +14,18 @@ namespace LeetCode.Algorithm
 {
     public partial class Solution
     {
+        /// <summary>
+        /// https://leetcode.cn/problems/min-cost-climbing-stairs/description/
+        /// </summary>
+        /// <param name="cost"></param>
+        /// <returns></returns>
         public int MinCostClimbingStairs(int[] cost)
         {
             var first = 0;
             var second = 0;
             for(int i = 1; i < cost.Length; i++)
             {
-                var t1 = first + cost[i-1];
-                var t2 = second + cost[i];
-                var sum = Math.Min(t1, t2);
-
-                //$"{i}:{first}:{second}:{sum}".Dummy();
-
-                first = second;
-                second = sum;
-
-               
+                (first, second) = (second,Math.Min(first + cost[i - 1], second + cost[i]));
             }
 
             return second;

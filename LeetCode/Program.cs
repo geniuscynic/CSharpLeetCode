@@ -4,4 +4,4 @@ using LeetCode.Algorithm;
 Console.WriteLine("Hello, World!");
 
 
-new Solution().Test0746();
+new Solution().Test1668();
