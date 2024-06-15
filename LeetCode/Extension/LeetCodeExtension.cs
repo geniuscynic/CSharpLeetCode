@@ -21,6 +21,14 @@ namespace LeetCode.Extension
                 Console.WriteLine(item);
             }
         }
+        
+        public static void Dummy(this IList<string> input)
+        {
+            foreach (var item in input)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
         public static void Dummy(this string input)
         {
